@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: routing-angular
+    env: static
+    staticPublishPath: dist/routing-angular
+    buildCommand: ng build --configuration production
+    routes:
+      - type: rewrite
+        source: /**
+        destination: /index.html
